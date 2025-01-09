@@ -7,113 +7,142 @@ final_prompt: |
 eval_prompt: |
   {instruction}
   
-  [Question] {question}
-  [Answer] 
+  [Вопрос] {question}
+  [Ответ] 
 
 quest_reason_ans: |
 
-  [Question] {question}
-  [Answer] {answer}
+  [Вопрос] {question}
+  [Ответ] {answer}
 
-system_prompt: You are a helpful assistant developed by OpenAI that can efficiently perform tasks as per instruction
+system_prompt: Вы — полезный помощник, который может эффективно выполнять задачи в соответствии с инструкциями
 
-expert_profile: You are a helpful assistant developed by OpenAI that can efficiently perform tasks as per instruction
+expert_profile: Вы — полезный помощник, который может эффективно выполнять задачи в соответствии с инструкциями
 
 thinking_styles:
-  - "How could I devise an experiment to help solve that problem?"
-  - "Make a list of ideas for solving this problem, and apply them one by one to the problem to see if any progress can be made."
-  - "How could I measure progress on this problem?"
-  - "How can I simplify the problem so that it is easier to solve?"
-  - "What are the key assumptions underlying this problem?"
-  - "What are the potential risks and drawbacks of each solution?"
-  - "What are the alternative perspectives or viewpoints on this problem?"
-  - "What are the long-term implications of this problem and its solutions?"
-  - "How can I break down this problem into smaller, more manageable parts?"
-  - "Critical Thinking: This style involves analyzing the problem from different perspectives, questioning assumptions, and evaluating the evidence or information available. It focuses on logical reasoning, evidence-based decision-making, and identifying potential biases or flaws in thinking."
-  - "Try creative thinking, generate innovative and out-of-the-box ideas to solve the problem. Explore unconventional solutions, thinking beyond traditional boundaries, and encouraging imagination and originality."
-  - "Seek input and collaboration from others to solve the problem. Emphasize teamwork, open communication, and leveraging the diverse perspectives and expertise of a group to come up with effective solutions."
-  - "Use systems thinking: Consider the problem as part of a larger system and understanding the interconnectedness of various elements. Focuses on identifying the underlying causes, feedback loops, and interdependencies that influence the problem, and developing holistic solutions that address the system as a whole."
-  - "Use Risk Analysis: Evaluate potential risks, uncertainties, and tradeoffs associated with different solutions or approaches to a problem. Emphasize assessing the potential consequences and likelihood of success or failure, and making informed decisions based on a balanced analysis of risks and benefits."
-  - "Use Reflective Thinking: Step back from the problem, take the time for introspection and self-reflection. Examine personal biases, assumptions, and mental models that may influence problem-solving, and being open to learning from past experiences to improve future approaches."
-  - "What is the core issue or problem that needs to be addressed?"
-  - "What are the underlying causes or factors contributing to the problem?"
-  - "Are there any potential solutions or strategies that have been tried before? If yes, what were the outcomes and lessons learned?"
-  - "What are the potential obstacles or challenges that might arise in solving this problem?"
-  - "Are there any relevant data or information that can provide insights into the problem? If yes, what data sources are available, and how can they be analyzed?"
-  - "Are there any stakeholders or individuals who are directly affected by the problem? What are their perspectives and needs?"
-  - "What resources (financial, human, technological, etc.) are needed to tackle the problem effectively?"
-  - "How can progress or success in solving the problem be measured or evaluated?"
-  - "What indicators or metrics can be used?"
-  - "Is the problem a technical or practical one that requires a specific expertise or skill set? Or is it more of a conceptual or theoretical problem?"
-  - "Does the problem involve a physical constraint, such as limited resources, infrastructure, or space?"
-  - "Is the problem related to human behavior, such as a social, cultural, or psychological issue?"
-  - "Does the problem involve decision-making or planning, where choices need to be made under uncertainty or with competing objectives?"
-  - "Is the problem an analytical one that requires data analysis, modeling, or optimization techniques?"
-  - "Is the problem a design challenge that requires creative solutions and innovation?"
-  - "Does the problem require addressing systemic or structural issues rather than just individual instances?"
-  - "Is the problem time-sensitive or urgent, requiring immediate attention and action?"
-  - "What kinds of solution typically are produced for this kind of problem specification?"
-  - "Given the problem specification and the current best solution, have a guess about other possible solutions."
-  - "Let's imagine the current best solution is totally wrong, what other ways are there to think about the problem specification?"
-  - "What is the best way to modify this current best solution, given what you know about these kinds of problem specification?"
-  - "Ignoring the current best solution, create an entirely new solution to the problem."
-  - "Let's think step by step."
-  - "Let's make a step by step plan and implement it with good notion and explanation."
-
+- Как я мог бы разработать эксперимент, чтобы помочь решить эту проблему?
+- Составь список идей для решения этой проблемы и применяй их одну за другой,
+  чтобы увидеть, можно ли добиться какого-либо прогресса.
+- Как я мог бы измерить прогресс в решении этой проблемы?
+- Как я могу упростить задачу, чтобы ее было легче решить?
+- Каковы ключевые предположения, лежащие в основе этой проблемы?
+- Каковы потенциальные риски и недостатки каждого решения?
+- Каковы альтернативные перспективы или точки зрения на эту проблему?
+- Каковы долгосрочные последствия этой проблемы и её решений?
+- Как я могу разбить эту проблему на более мелкие, управляемые части?
+- 'Критическое мышление: Этот стиль включает в себя анализ проблемы с разных точек
+  зрения, постановку под сомнение предположений и оценку доступных доказательств или
+  информации. Он сосредоточен на логическом рассуждении, принятии решений на основе
+  фактов и выявлении потенциальных предвзятостей или недостатков в мышлении.'
+- Попробуйте креативное мышление, генерируйте инновационные и нестандартные идеи для
+  решения проблемы. Исследуйте нетрадиционные решения, мыслите за пределами традиционных
+  границ и поощряйте воображение и оригинальность.
+- Ищите мнения и сотрудничество с другими для решения проблемы. Подчеркните важность
+  командной работы, открытого общения и использования разнообразных точек зрения и
+  экспертизы группы для нахождения эффективных решений.
+- 'Используйте системное мышление: рассматривайте проблему как часть более крупной
+  системы и понимайте взаимосвязь различных элементов. Сосредоточьтесь на выявлении
+  основных причин, обратных связей и взаимозависимостей, которые влияют на проблему,
+  а также на разработке целостных решений, которые учитывают систему в целом.'
+- 'Используйте анализ рисков: оцените потенциальные риски, неопределенности и компромиссы,
+  связанные с различными решениями или подходами к проблеме. Подчеркните важность
+  оценки потенциальных последствий и вероятности успеха или неудачи, а также принятия
+  обоснованных решений на основе сбалансированного анализа рисков и выгод.'
+- 'Используйте рефлексивное мышление: отойдите от проблемы, уделите время интроспекции
+  и самоанализу. Изучите личные предвзятости, предположения и ментальные модели, которые
+  могут влиять на решение проблемы, и будьте открыты к обучению на основе прошлых
+  опытов для улучшения будущих подходов.'
+- Какова основная проблема или вопрос, который необходимо решить?
+- Каковы основные причины или факторы, способствующие возникновению проблемы?
+- Есть ли какие-либо потенциальные решения или стратегии, которые уже были опробованы?
+  Если да, то каковы были результаты и извлеченные уроки?
+- Какие потенциальные препятствия или трудности могут возникнуть при решении этой
+  проблемы?
+- Есть ли какие-либо актуальные данные или информация, которые могут дать представление
+  о проблеме? Если да, то какие источники данных доступны и как их можно проанализировать?
+- Есть ли заинтересованные стороны или лица, которые непосредственно затронуты проблемой?
+  Каковы их взгляды и потребности?
+- Какие ресурсы (финансовые, человеческие, технологические и т.д.) необходимы для
+  эффективного решения проблемы?
+- Как можно измерить или оценить прогресс или успех в решении проблемы?
+- Какие индикаторы или метрики можно использовать?
+- Проблема является технической или практической, требующей специфической экспертизы
+  или набора навыков? Или это скорее концептуальная или теоретическая проблема?
+- Проблема связана с физическими ограничениями, такими как ограниченные ресурсы, инфраструктура
+  или пространство?
+- Проблема связана с человеческим поведением, таким как социальная, культурная или
+  психологическая проблема?
+- Включает ли проблема принятие решений или планирование, где необходимо делать выбор
+  в условиях неопределенности или с competing objectives?
+- Проблема является аналитической, требующей анализа данных, моделирования или методов
+  оптимизации?
+- Проблема является ли вызовом в дизайне, который требует креативных решений и инноваций?
+- Проблема требует решения системных или структурных вопросов, а не только отдельных
+  случаев?
+- Проблема является временно чувствительной или срочной, требующей немедленного внимания
+  и действий?
+- Какие виды решений обычно разрабатываются для такого рода спецификаций проблем?
+- Учитывая спецификацию проблемы и текущее лучшее решение, попробуйте предположить
+  другие возможные решения.
+- Давайте представим, что текущее лучшее решение совершенно неверно. Какие еще способы
+  существуют для того, чтобы подумать о спецификации проблемы?
+- Какой лучший способ модифицировать текущее лучшее решение, учитывая то, что вы знаете
+  о подобных спецификациях задач?
+- Игнорируя текущее лучшее решение, создайте совершенно новое решение проблемы.
+- Давайте подумаем шаг за шагом.
+- Давайте составим пошаговый план и реализуем его с хорошими пояснениями и объяснениями.
 
 # ans_delimiter_instruction: " Wrap only your final answer, without reason for each question separately between <ANS_START> and <ANS_END> tags."
 ans_delimiter_instruction: ""
 
+# Промпт для получения НЕГАТИВНОЙ критики после мутации
 meta_critique_template: |
-  I'm trying to write a zero-shot instruction that will help the most capable and suitable agent to solve the task.
-  My current prompt is: "{instruction}"
-  But this prompt gets the following examples wrong: {examples}
-  Provide detail feedback which identifies reasons where the instruction could have gone wrong.
-  Wrap each reason with <START> and <END>
+  Я пытаюсь написать zero-shot инструкцию, которая поможет наиболее способному и подходящему агенту решить задачу.
+  Моя текущая инструкция: "{instruction}"
+  Но эта инструкция неправильно обрабатывает следующиме примеры: {examples}
+  Пожалуйста, предоставьте подробную обратную связь, указывая причины, по которым инструкция могла бы быть выполнена неверно.
+  Обрамите каждую причину тегами <START> и <END>
   
-
+# Промпт для получения ПОЗИТИВНОЙ  критики после мутации
 meta_positive_critique_template: |
-  I'm trying to write a prompt for zero-shot instruction task that will help the most capable and suitable agent to solve the task.
-  My current prompt is:
-  [CURRENT PROMPT] "{instruction}"
-  Now this prompt got the following examples correct:
-  [CORRECT EXAMPLES] {examples}
-  Since you cant use these examples, analyse and understand characteristics/complexity and diversity of these examples and their reasoning chain and
-  accordingly provide suggestions to further improve the prompt and make it better as a zero shot instruction task.
-    
+  Я пытаюсь написать zero-shot инструкцию, которая поможет наиболее способному и подходящему агенту решить задачу.
+  Моя текущая инструкция:
+  [ТЕКУЩАЯ ИНСТРУКЦИЯ] "{instruction}"
+  На данный момент эта инструкция дала правильные результаты в следующих случаях:
+  [ПРАВИЛЬНЫЕ ПРИМЕРЫ] {examples}
+  Поскольку вы не можете использовать эти примеры, проанализируйте и поймите характеристики/сложность и разнообразие этих примеров и их цепочку рассуждений,
+  а затем предложите рекомендации для дальнейшего улучшения инструкции и повышения ее качества как zero-shot инструкции.
 
+# Промпт для УЛУЧШЕНИЯ ПРОМПТА ПО КРИТИКЕ
 critique_refine_template: |
-  I'm trying to write a zero-shot instruction that will help the most capable and suitable agent to solve the task.
-  My current prompt is: "{instruction}"
-  But this prompt gets the following examples wrong: {examples}
-  On carefully analysing these examples, following are the critiques related to prompt {critique}
-  Use the critique smartly, refine the current prompt to make sure we dont get these examples wrong.
-  Based on the above information, Now I want you to write {steps_per_sample} different improved prompts.
-  Each prompt should be wrapped with <START> and <END>.
-  [Refined Prompts]:
+  Я пытаюсь написать zero-shot инструкцию, которая поможет наиболее способному и подходящему агенту решить задачу.
+  Моя текущая инструкция: "{instruction}"
+  Но эта инструкция неправильно обрабатывает следующиме примеры: {examples}
+  При тщательном анализе этих примеров были выявлены следующие недостатки, относящиеся к инструкции: {critique}
+  Используйте критику разумно, доработайте текущую инструкцию, чтобы избежать ошибок с этими примерами.
+  Основываясь на вышеизложенной информации, теперь я хочу, чтобы вы написали {steps_per_sample} различных улучшенных инструкций.
+  Каждая инструкция должна быть заключена в теги <START> и <END>.
+  [Улучшенные инструкции]:
 
-
+# промпт для получения ответов от модели
 solve_template: |
-  You are given a prompt instruction and the following {questions_batch_size} questions of the same task.
-  [Instruction]: {instruction}
-
-  [Question]: {questions}
-
+  Вам дана инструкция и следующие {questions_batch_size} вопросов одной и той же задачи.
+  [Инструкция]: {instruction}
+  [Вопрос]: {questions}
   {answer_format}
+  [Ответы]:
 
-  [Answers]:
-  
-
+# мета-промпт для мутаици промптов (get_different_styles)
 meta_sample_template: |
-  You are given a task description and a prompt instruction and different styles known as meta prompts:
-  [Task Description]: {task_description}
-  [Meta Prompt]: {meta_prompts}
-  Now you need to generate {num_variations} variations of following Instruction adaptively mixing meta prompt while keeping similar semantic meaning.
-  Make sure to wrap each generated prompt with <START> and <END>
-  [Prompt Instruction]: {prompt_instruction}
-  [Generated Prompts]:
+  Вам дано описание задачи и инструкция, а также различные стили, известные как мета-подсказки:
+  [Описание задачи]: {task_description}
+  [Мета-подсказка]: {meta_prompts}
+  Теперь вам нужно сгенерировать {num_variations} вариантов следующей инструкции, адаптивно смешивая мета-подсказки, сохраняя при этом схожее семантическое значение.
+  Убедитесь, что каждая сгенерированная инстрцкция обернута в теги <START> и <END>
+  [Инструкция]: {prompt_instruction}
+  [Сгенерированные инструкции]:  
 
-
+# промпт для генерации интентов (key words), пока забъем, тк выключили на False
 intent_template: |
   You are given an instruction along description of task labelled as [Task Description]. For the given instruction, list out 3-5 keywords in comma separated format as [Intent] which define the characteristics or properties required by the about the most capable and suitable agent to solve the task using the instruction.
 
@@ -125,6 +154,8 @@ intent_template: |
   [Intent]:
 
 
+
+# промпт для генерации описания эксперто, пока забъем, тк выключили на False
 expert_template: |
   For each instruction, write a high-quality description about the most capable and suitable agent to answer the instruction. In second person perspective.\n
   
@@ -145,87 +176,90 @@ expert_template: |
   [Agent Description]:
 
 
+
+# промпт для критики выбранных примеров (чтобы потом получить лучшие примеры)
 examples_critique_template: |
-  You are an expert example selector who can help in selection of right in-context examples to help the most suitable agent solve this problem.
-  You are also given the prompt instruction which is used to solve this task
-  [Prompt]: {prompt}
-  You are given the task description of the task:
-  [Task Description]: {task_description}
-  I'm trying to write a few shots prompt using {num_examples} in-context examples to effectively solve any questions of the above task.
-  My current {num_examples} in-context examples set are: {examples}
-  Think of analysing, understanding and creating examples of task on the criteria of diversity of types of examples, complexity of the nature/characteristics of the examples and relevance/compatibility to the whole example set in total.
-  Output all the suggestions/ improvement which could be made to improve each individual example of the whole example selection set.
+  Вы являетесь экспертом по выбору примеров, который может помочь в выборе подходящих примеров в контексте, чтобы помочь наиболее подходящему агенту решить эту задачу.
+  Вам также дана инструкция, которая используется для решения этой задачи.
+  [Инструкция]: {prompt}
+  Вам дано описание задачи:
+  [Описание задачи]: {task_description}
+  Я пытаюсь написать несколько примеров, используя {num_examples} примеров в контексте, чтобы эффективно решить любые вопросы, связанные с вышеуказанной задачей.
+  Мой текущий набор из {num_examples} примеров в контексте: {examples}
+  Подумайте о том, чтобы проанализировать, понять и создать примеры задачи по критериям разнообразия типов примеров, сложности природы/характеристик примеров и актуальности/совместимости с общим набором примеров в целом.
+  Выведите все предложения/улучшения, которые могут быть внесены для улучшения каждого отдельного примера из всего набора примеров.
 
+# промпт для критики выбранных примеров (чтобы потом получить лучшие примеры) НО БЕЗ ИСХОДНЫХ ПРИМЕРОВ
 examples_critique_template_zero_shot: |
-  You are an expert example selector who can help in selection of right in-context examples to help the most suitable agent solve this problem.
-  You are also given the prompt instruction which is used to solve this task
-  [Prompt]: {prompt}
-  You are given the task description of the task:
-  [Task Description]: {task_description}
-  I'm trying to write a few shots prompt using {num_examples} in-context examples to effectively solve any questions of the above task.
-  Think of analysing, understanding and creating examples of task on the criteria of diversity of types of examples, complexity of the nature/characteristics of the examples and relevance/compatibility to the whole example set in total.
-  Output all the suggestions/ improvement which could be made to improve each individual example of the whole example selection set.
+  Вы являетесь экспертом по выбору примеров, который может помочь в выборе подходящих примеров в контексте, чтобы помочь наиболее подходящему агенту решить эту задачу.
+  Вам также дана инструкция, которая используется для решения этой задачи.
+  [Инструкция]: {prompt}
+  Вам дано описание задачи:
+  [Описание задачи]: {task_description}
+  Я пытаюсь написать несколько примеров, используя {num_examples} примеров в контексте, чтобы эффективно решить любые вопросы, связанные с вышеуказанной задачей.
+  Подумайте о том, чтобы проанализировать, понять и создать примеры задачи по критериям разнообразия типов примеров, сложности природы/характеристик примеров и актуальности/совместимости с общим набором примеров в целом.
+  Выведите все предложения/улучшения, которые могут быть внесены для улучшения каждого отдельного примера из всего набора примеров.
 
+
+# промпт для улучшения примеров по критике
 examples_optimization_template: |
-  You are an expert example selector who can help in selection of right in-context examples to help the agent solve this problem.
-  You are also given the prompt instruction which is used to solve this task
-  [Prompt]: {prompt}
-  You are given the description of the task:
-  [Task Description]: {task_description}
-  I'm trying to write a few shots prompt using {num_examples} in-context examples to effectively solve any questions of the above task.
-  My current {num_examples} in-context examples set are: {examples}
-  You are also given a set of suggestions/improvements which could be made to improve each individual example of the whole example selection set:
-  [SUGGESTION/IMPROVEMENT]: {critique}
-  Based on the above information, use all of it smartly and diligently to carefully create new set of {num_examples}, which follow these suggestion and improvements.
-  Make sure to output each example wrapped with <START> and <END>.
+  Вы являетесь экспертом по выбору примеров, который может помочь в выборе подходящих примеров в контексте, чтобы помочь наиболее подходящему агенту решить эту задачу.
+  Вам также дана инструкция, которая используется для решения этой задачи.
+  [Инструкция]: {prompt}
+  Вам дано описание задачи:
+  [Описание задачи]: {task_description}
+  Я пытаюсь написать несколько примеров, используя {num_examples} примеров в контексте, чтобы эффективно решить любые вопросы, связанные с вышеуказанной задачей.
+  Мой текущий набор из {num_examples} примеров в контексте: {examples}
+  Вам также предоставлен набор предложений/улучшений, которые могут быть внесены для улучшения каждого отдельного примера из всего набора примеров:
+  [ПРЕДЛОЖЕНИЕ/УЛУЧШЕНИЕ]: {critique}
+  Основываясь на вышеуказанной информации, используйте все это умно и тщательно, чтобы создать новый набор из {num_examples}, который будет следовать этим предложениям и улучшениям.
+  Убедитесь, что каждый пример обернут в теги <START> и <END>.
   
-  New examples should follow this format strictly:
+  Новые примеры должны строго следовать этому формату:
+  [Вопрос] за которым следует часть вопроса примера
+  [Ответ] за которым следуют все шаги логического рассуждения, связанные с ответом. Финальный ответ в формате "<ANS_START>[ответ]<ANS_END>"
   
-  [Question] followed by question part of the example
-  [Answer] followed by the all the steps of logic reasoning statements related to answer. The final answer as "<ANS_START>[answer]<ANS_END>"
-  
-  For Example: <START>
+  Например: <START>
   {gt_example}
   <END>
   
-  [New Examples]:
+  [Новые примеры]:  
 
-
+# промпт для получения CoT для примеров из финального промпта
 generate_reason_template: |
-  You are given a task description and instruction followed by a set of correct examples of the task.
+  Вам дано описание задачи и инструкция, за которыми следует набор правильных примеров этой задачи.
   
-  [Task Description]: {task_description}
+  [Описание задачи]: {task_description}
   
-  [Instruction]: {instruction}
+  [Инструкция]: {instruction}
   
-  Each example has a question denoted by question [Question] and a final answer [Answer] .
+  Каждый пример содержит вопрос, обозначенный как [Вопрос], и окончательный ответ [Ответ].
   
-  [Question]: {question}
+  [Вопрос]: {question}
   
-  [Answer]: {answer}
+  [Ответ]: {answer}
   
-  Now your task is to generate a reasoning chain that contains the steps, logical pathway followed to arrive at the correct answer, assuming the necessary domain knowledge is present as part of the question and task description.
+  Теперь ваша задача — сгенерировать цепочку рассуждений, которая содержит шаги и логический путь, следуемый для достижения правильного ответа, предполагая, что необходимое знание в данной области присутствует в вопросе и описании задачи.
   
-  Make sure it is specific, non-ambiguous, complete, and specifies all the logic and steps required to reach the final answer.
+  Убедитесь, что она конкретна, недвусмысленна, полна и указывает всю логику и шаги, необходимые для достижения окончательного ответа.
   
-  [Improved Reasoning Chain]:
+  [Улучшенная цепочка рассуждений]:
 
 
 reason_optimization_template: |
-  You are given a task description and instructions of given task
+  Вам дано описание задачи и инструкция, за которыми следует набор правильных примеров этой задачи.
   
-  [Task Description]: {task_description}
+  [Описание задачи]: {task_description}
   
-  [Instruction]: {instruction}
+  [Инструкция]: {instruction}
   
-  Each example has a question denoted by a question [Question] and a final answer [Answer].
+  Каждый пример содержит вопрос, обозначенный как [Вопрос], и окончательный ответ [Ответ].
   
-  [Question]: {question}
+  [Вопрос]: {question}
   
-  [Answer]: {answer}
+  [Ответ]: {answer}
   
-  Please explain your reasoning behind reaching the answer given in a concise, complete, and coherent text of reasoning that contains all the steps or logical pathways followed. Ensure it is specific and non-ambiguous, and assume the necessary domain knowledge is in the question and task description.
+  Пожалуйста, объясните ваше рассуждение, которое привело к данному ответу, в кратком, полном и последовательном тексте, содержащем все шаги или логические пути, которые были пройдены. Убедитесь, что оно конкретно и недвусмысленно, и предположите, что необходимое знание в данной области содержится в вопросе и описании задачи.  
   
-  [Improved Reasoning Chain]:
-
+  [Улучшенная цепочка рассуждений]:
   

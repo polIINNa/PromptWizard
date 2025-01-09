@@ -58,7 +58,7 @@ def read_jsonl(file_path: str) -> List:
     :return: All json strings in .jsonl file as a list
     """
     jsonl_list = []
-    with open(file_path, "r") as fileobj:
+    with open(file_path, "r", encoding='utf-8') as fileobj:
         while True:
             single_row = fileobj.readline()
             if not single_row:
@@ -108,9 +108,9 @@ def save_jsonlist(file_path: str, json_list: List, mode: str = "a"):
     :param mode: Write mode
     :return: None
     """
-    with open(file_path, mode) as file_obj:
+    with open(file_path, mode, encoding='utf-8') as file_obj:
         for json_obj in json_list:
-            json_str = json.dumps(json_obj, default=str)
+            json_str = json.dumps(json_obj, default=str, ensure_ascii=False)
             file_obj.write(json_str+"\n")
 
 

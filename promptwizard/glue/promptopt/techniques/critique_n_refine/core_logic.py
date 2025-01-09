@@ -478,6 +478,7 @@ class CritiqueNRefine(PromptOptimizer, UniversalBaseClass):
                                                             params.style_variation)
                 
                 if run_without_train_examples:
+                    self.logger.info("Оптимизация промпта без разметки.")
                     prompt_index = 1
                     print("\nOptimization Finished...")
                     print("\nPossible prompt variations:")
@@ -535,6 +536,8 @@ class CritiqueNRefine(PromptOptimizer, UniversalBaseClass):
             # Refine task description and examples iteratively
             print("\nRefining Task description and Examples iteratively....")
             for i in tqdm(range(params.refine_task_eg_iterations)):
+                #TODO: ПОЧЕМУ ЭТО РАНДОМНО?
+                # МБ СИТУАЦИЯ, КОГДА УЛУЧШАЕТСЯ ТОЛЬКО ИНСТРУКЦИЯ ИЛИ ТОЛЬКО ПРИМЕРЫ
                 refine_task_desc = random.choice([True, False])
                 if refine_task_desc:
                     refined_instruction = self.get_best_instr_by_critique(examples, params)
